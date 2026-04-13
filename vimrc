@@ -35,8 +35,6 @@ nnoremap <C-x> :wq<CR>
 " Definido <leader>
 let mapleader = " "
 
-" Atalho para copiar com wl-copy
-xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
 
 set nocompatible
 " Configurando plugins
@@ -68,11 +66,18 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'preservim/nerdcommenter'
 
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+
 " Tema everforest
 Plug 'sainnhe/everforest'
 
 call plug#end()
 
+" Atalho para copiar com wl-copy
+xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
+
+" Atalho para copiar em ssh
+"xnoremap <silent> <leader>0 <Plug>OSCYankVisual
 
 " Tema setado
 colorscheme everforest
