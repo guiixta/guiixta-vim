@@ -90,7 +90,7 @@ let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 nnoremap <M-Right> :bnext<CR>
 nnoremap <M-Left> :bprevious<CR>
-nnoremap <leader>x :bd <bar> bd<CR>
+nnoremap <leader>x :bd<CR>
 
 nnoremap <X2Mouse> :bnext<CR>
 nnoremap <X1Mouse> :bprevious<CR>
