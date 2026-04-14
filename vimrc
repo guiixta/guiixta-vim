@@ -79,6 +79,11 @@ xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
 " Atalho para copiar em ssh
 "xnoremap <silent> <leader>0 <Plug>OSCYankVisual
 
+" Atalho para abrir um terminal dentro do vim
+nnoremap <leader>t :botright terminal<CR>
+tnoremap <ESC> <C-\><C-n>
+autocmd terminalOpen * nnoremap <buffer> <leader>t :q!<CR>
+
 " Tema setado
 colorscheme everforest
 
