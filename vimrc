@@ -74,7 +74,7 @@ Plug 'sainnhe/everforest'
 call plug#end()
 
 " Ler arquivos .blade como php
-autocmd BufRead,BufNewFile *.blade.php set filetype=php 
+"autocmd BufRead,BufNewFile *.blade.php set filetype=php 
 
 " Atalho para copiar com wl-copy
 "xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
