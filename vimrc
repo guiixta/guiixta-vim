@@ -73,11 +73,14 @@ Plug 'sainnhe/everforest'
 
 call plug#end()
 
+" Ler arquivos .blade como php
+"autocmd BufRead,BufNewFile *.blade.php set filetype=php 
+
 " Atalho para copiar com wl-copy
-xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
+"xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
 
 " Atalho para copiar em ssh
-"xnoremap <silent> <leader>0 <Plug>OSCYankVisual
+xnoremap <silent> <leader>0 <Plug>OSCYankVisual
 
 " Atalho para abrir um terminal dentro do vim
 nnoremap <leader>t :botright terminal<CR>
