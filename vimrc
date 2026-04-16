@@ -135,6 +135,7 @@ inoremap <silent><expr> <TAB>
       \ check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 
+" Atalho para fazer o tab funcionar com coc
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
