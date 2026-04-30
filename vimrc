@@ -82,6 +82,9 @@ call plug#end()
 " Atalho para copiar em ssh
 xnoremap <silent> <leader>0 <Plug>OSCYankVisual
 
+" Atalho para copiar em ssh
+" xnoremap <silent> <leader>0 "+y
+
 " Atalho para abrir um terminal dentro do vim
 nnoremap <leader>t :botright terminal<CR>
 tnoremap <ESC> <C-\><C-n>
@@ -137,13 +140,6 @@ inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-
-" Atalho para ir para a definição de functions
-nnoremap <silent> gd <Plug>(coc-definition)
-
-" Atalho para fazer o tab funcionar com coc
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Usar o Tab para completar
 function! s:check_back_space() abort
