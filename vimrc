@@ -138,18 +138,19 @@ let g:webdevicons_enable_ctrlp = 1
 " Emmet Config
 let g:user_emmet_mode='i'
 
-" Usar <Enter> para confirmar a seleção do autocompletar COC
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-" Usar o Tab para completar
-function! s:check_back_space() abort
+" tab para coc não se confudir
+function! Check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ Check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+" Usar <Enter> para confirmar a seleção do autocompletar COC
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 " Create default mappings
