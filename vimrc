@@ -66,10 +66,13 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'preservim/nerdcommenter'
 
+Plug 'tpope/vim-fugitive'
+
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 
 " Tema everforest
 Plug 'sainnhe/everforest'
+
 
 call plug#end()
 
@@ -77,10 +80,10 @@ call plug#end()
 "autocmd BufRead,BufNewFile *.blade.php set filetype=php 
 
 " Atalho para copiar com wl-copy
-"xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
+xnoremap <silent> <leader>0 y:call system("wl-copy", getreg('"'))<CR>
 
 " Atalho para copiar em ssh
-xnoremap <silent> <leader>0 <Plug>OSCYankVisual
+"xnoremap <silent> <leader>0 <Plug>OSCYankVisual
 
 " Atalho para copiar em ssh
 " xnoremap <silent> <leader>0 "+y
@@ -104,6 +107,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
+let g:airline_py_git_branch = 1
 nnoremap <M-Right> :bnext<CR>
 nnoremap <M-Left> :bprevious<CR>
 nnoremap <leader>x :bd<CR>
